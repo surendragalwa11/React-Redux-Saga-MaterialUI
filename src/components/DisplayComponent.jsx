@@ -79,7 +79,7 @@ class DisplayComponent extends Component
                                     className={classNames(classes.avatar, classes.bigAvatar)}
                                 />   
                             </CustomTableCell>                               
-                            <CustomTableCell>EditForm2</CustomTableCell>
+                            <CustomTableCell><EditRow id={item.id}/></CustomTableCell>
                         </TableRow>
                     ))}
                 </TableBody>

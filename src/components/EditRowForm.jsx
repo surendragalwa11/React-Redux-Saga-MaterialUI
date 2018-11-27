@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import EditRowForm2 from './EditRowForm2';
 
 class EditRowForm extends Component
 {
@@ -16,9 +17,16 @@ class EditRowForm extends Component
         };
         console.log(this.state.fname);
     }
+
     
-    onSubmit=(e)=>{
-        e.preventDefault();
+   onEditClick=()=>{
+        console.log("onEditClick called");
+        return this.props.item;
+   }
+
+    
+    onSubmit=()=>{
+    
         console.log("onSubmit of EditROw called");
         console.log(this.props.item.id);
         console.log(this.state);
@@ -60,7 +68,12 @@ class EditRowForm extends Component
         console.log("We've called EditRowForm component");
         return(
         <div>
-            EditForm2    
+            
+            <EditRowForm2  fname={this.state.fname} lname={this.state.lname}
+                iurl={this.state.iurl} onFnameChange={this.onFnameChange}
+                onLnameChange={this.onLnameChange} onIurlChange={this.onIurlChange}
+                onEditClick={this.onEditClick} onSubmit={this.onSubmit}
+            />
         </div>);
     }
 }
