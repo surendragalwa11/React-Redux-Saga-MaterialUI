@@ -14,8 +14,6 @@ class AddRowForm extends Component
     constructor(props)
     {
         super(props);
-        console.log("Constructor of AddRowForm called");
-        console.log(props);
         
         this.state={
             lname:'',
@@ -28,7 +26,6 @@ class AddRowForm extends Component
     onSubmit=(e)=>{
         this.setState({ open: false });
         e.preventDefault();
-        console.log(!this.state.lname.trim()|| !this.state.fname.trim());
         if(!this.state.lname.trim()|| !this.state.fname.trim()|| !this.state.iurl.trim())
         {
         }
@@ -58,28 +55,20 @@ class AddRowForm extends Component
     
     onFNChange=(e)=>{
         const Fname=e.target.value;
-        console.log("onFnameChange in AddRowForm, called");
-        console.log(Fname);
         this.setState({fname:Fname});    
     };
     onLNChange=(e)=>{
         const Lname=e.target.value;
-        console.log("onLnameChange in AddRowForm, called");
-        console.log(Lname);
         this.setState({lname:Lname});   
     };
     
     onIUChange=(e)=>{
         const Iurl=e.target.value;
-        console.log("onIurlChange in AddRowForm, called");
-        console.log(Iurl);
         this.setState({iurl:Iurl});    
     };
 
     render()
     {
-        console.log(this.props);
-        console.log("We've called Add RowForm component");
         return(
             <div >
                 <Button variant="extendedFab" color="primary"
