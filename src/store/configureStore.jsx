@@ -3,8 +3,6 @@ import itemReducer from '../reducers/itemReducer';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from '../saga/rootSaga';
 
-
-//const enhancer=window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 const composeEnhancers =
     typeof window === 'object' &&
         window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?   
@@ -17,12 +15,8 @@ const composeEnhancers =
 const configureStore=()=>{
     
     const sagaMiddleware = createSagaMiddleware();
-    console.log("configureStore called,sagaMiddleware created");
-    const enhancer = composeEnhancers( applyMiddleware(sagaMiddleware));  
-    console.log("saga middleware applied");
+    const enhancer = composeEnhancers( applyMiddleware(sagaMiddleware));
     const store = createStore( itemReducer , enhancer );
-    console.log("redux store created,saga mlw applied");
-    console.log("calling watcher saga");
     return { ...store,
              runSaga:sagaMiddleware.run(rootSaga)
     };
