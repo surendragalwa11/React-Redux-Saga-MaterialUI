@@ -52,9 +52,6 @@ class DisplayComponent extends Component
 {
     render()
     {
-        console.log("we're inside DisplayComponent");
-        console.log(this.props);
-        console.log(this.props.items);
         const { classes } = this.props;
         
         return(<div >
