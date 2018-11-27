@@ -5,8 +5,6 @@ class AddRowForm2 extends Component
     constructor(props)
     {
         super(props);
-        console.log("Constructor of AddRowForm called");
-        console.log(props);
         this.state={
             lname:'',
             fname:'',
@@ -18,27 +16,19 @@ class AddRowForm2 extends Component
 
     onFnameChange=(e)=>{
         const Fname=e.target.value;
-        console.log("onFnameChange in AddRowForm, called");
-        console.log(Fname);
         this.setState({fname:Fname});    
     };
     onLnameChange=(e)=>{
         const Lname=e.target.value;
-        console.log("onLnameChange in AddRowForm, called");
-        console.log(Lname);
         this.setState({lname:Lname});   
     };
     onIurlChange=(e)=>{
         const Iurl=e.target.value;
-        console.log("onIurlChange in AddRowForm, called");
-        console.log(Iurl);
         this.setState({iurl:Iurl});    
     };
 
     render()
     {
-        console.log(this.props);
-        console.log("We've called AddRowForm2 component now");
         return(<div>
 
            <button type="button" className="btn btn-info btn-lg" 
