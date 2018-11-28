@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## LIVE : check the live running app here(turn off the dev tools in chrome or open link in firefox)
+[https://fast-castle-78929.herokuapp.com/]
+
+
 ## Available Scripts
 
 In the project directory, you can run:
