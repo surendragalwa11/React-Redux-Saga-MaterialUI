@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## LIVE : check the live running app here(turn off the dev tools in chrome or open link in firefox)
-[https://fast-castle-78929.herokuapp.com/]
+https://fast-castle-78929.herokuapp.com/
 
 
 ## Available Scripts
